@@ -14,3 +14,13 @@ a {
     font-size: 1.2em;
     font-weight: 600;
 }
+
+.input-group-text {
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+
+.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
