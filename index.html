@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
     <link rel="stylesheet" href="style.css">
 
+    <script type="text/javascript">
+        var fxs_widget_config = {
+            Culture: "en-Us"
+        };
+    </script>
+
 </head>
 
 <body>
@@ -34,20 +40,25 @@
                     <a href="#" class="nav-link">
                         <li class="nav-item">Graph</li>
                     </a>
+                    <a href="#" class="nav-link " id="currencyConverter">
+                        <li class="nav-item">convert currency</li>
+                    </a>
+                    <form action="">
+                        <div class="input-group offset-lg-3">
 
-                </ul>
-                <form action="">
-                    <div class="input-group">
-                        <div class="input-group-append">
-                            <button type="button" class="btn btn-info bg-dark"> <i class="fas fa-search"> </i>
-                            </button>
+
+                            <input class="form-control" type="search" placeholder="search " />
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-info bg-dark"> <i class="fas fa-search"> </i>
+                                </button>
+
+                            </div>
 
                         </div>
+                    </form>
 
-                        <input class="form-control" type="text" placeholder="search " />
+                </ul>
 
-                    </div>
-                </form>
             </div>
         </nav>
 
@@ -55,30 +66,38 @@
 
     <div class="row">
 
-        <div class="col-md-6 col-12 card card-header">
-            <div class="form-group">
-                <input type="text" class="form-control firstCurrency">
-            </div>
-            <div class="form-group">
-                <select class="country1 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
-              
-                
+        <div class="col-md-4 col-9 offset-2  card card-header ">
+            <fieldset class="card card-header display">
+
+                <h2 class="col-md-12 offset-1"><span class="currSymbol ">$ </span> <span class="amount">80</span></h2>
+                <div class="form-group">
+                    <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 firstCurrency">
+                </div>
+                <div class="form-group">
+                    <select class="country1 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
                </select>
-            </div>
-            <div class="form-group">
-                <select class="country2 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
+                </div>
+                <div class="form-group">
+                    <select class="country2 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
         
             </select>
-            </div>
-            <div class="form-group">
-                <div class="form-group">
-                    <input type="text" class="form-control secondCurrency">
                 </div>
-            </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 secondCurrency">
+                    </div>
+                </div>
+            </fieldset>
+
         </div>
 
-        <div class="col-md-6 col-12 card card-header">
 
+
+        <div class="col-md-4 col-12 card card-header">
+
+            <div fxs_widget fxs_name="news" fxs_host="https://subscriptions.fxstreet.com/" fxs_feed="generalfeed" fxs_initial_take="3" fxs_take="10" fxs_view="minimal" fxs_customizable="true" fxs_free fxs_title="Place your title here" fxs_title_link="place your url here"
+                fxs_disable_links>
+            </div>
         </div>
     </div>
     <footer class="container">
@@ -89,6 +108,8 @@
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="./bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://staticcontent.fxstreet.com/widgets/core/js/fxswidget.js">
+    </script>
 </body>
 
 

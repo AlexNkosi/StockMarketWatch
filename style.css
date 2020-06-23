@@ -20,7 +20,19 @@ a {
     border-bottom-left-radius: 45px;
 }
 
-.input-group-text {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+
+/* .form-control {
+    width: 14.5em;
+} */
+
+.firstCurrency {
+    position: absolute;
+    top: 4.7em;
+    left: 2em;
+}
+
+.secondCurrency {
+    position: absolute;
+    top: 8.1em;
+    left: 2em;
 }
