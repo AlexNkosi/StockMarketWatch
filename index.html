@@ -95,9 +95,11 @@
 
         <div class="col-md-4 col-12 card card-header">
 
-            <div fxs_widget fxs_name="news" fxs_host="https://subscriptions.fxstreet.com/" fxs_feed="generalfeed" fxs_initial_take="3" fxs_take="10" fxs_view="minimal" fxs_customizable="true" fxs_free fxs_title="Place your title here" fxs_title_link="place your url here"
+            <!-- <div fxs_widget fxs_name="news" fxs_host="https://subscriptions.fxstreet.com/" fxs_feed="generalfeed" fxs_initial_take="3" fxs_take="10" fxs_view="minimal" fxs_customizable="true" fxs_free fxs_title="Place your title here" fxs_title_link="place your url here"
                 fxs_disable_links>
-            </div>
+            </div> -->
+            <span intrinio-widget-type="inline_ticker_summary m-8" intrinio-widget-ticker="AAPL"> AAPL </span>
+            <span intrinio-widget-type="inline_ticker_summary" intrinio-widget-ticker="AAPL"> AAPL </span><span intrinio-widget-type="inline_ticker_summary" intrinio-widget-ticker="AAPL"> AAPL </span>
         </div>
     </div>
     <footer class="container">
@@ -109,6 +111,23 @@
     <script src="./bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
     <script src="https://staticcontent.fxstreet.com/widgets/core/js/fxswidget.js">
+    </script>
+
+    <script type="application/javascript">
+        (function(f, i, n, t, e, c, h) {
+            f['IntrinioWidgetsObject'] = e;
+            f[e] = f[e] || function() {
+                (f[e].q = f[e].q || []).push(arguments)
+            }, f[e].l = 1 * new Date();
+            c = i.createElement(n),
+                h = i.getElementsByTagName(n)[0];
+            c.async = 1;
+            c.src = t;
+            h.parentNode.insertBefore(c, h)
+        })(window, document, 'script', 'https://widget-api-cdn.intrinio.com/intrinio-widgets.min.js', 'iw');
+        iw('initialize', {
+            userId: '2095ee9f024bec25f8d318238bba3322bdd1271613906cd7b5125229f23d654b'
+        });
     </script>
 </body>
 
