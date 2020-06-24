@@ -24,7 +24,7 @@ countries.addEventListener('click', countries1Currency); // EL to load countries
 countries2.addEventListener('click', countries2Currency); //EL to load countries in menu two
 firstCur.addEventListener('click', convertOne);
 currConShow.addEventListener('click', (e) => { //EL with annonymous funtion implemetation
-    let card = document.querySelector('.loadCountriesToMenu'); //Purpose is identify an element then toggle 
+    let card = document.querySelector('.display'); //Purpose is identify an element then toggle 
     card.classList.toggle('d-none'); //a class from bootrap
 });
 
@@ -148,7 +148,7 @@ let convInt = setInterval(() => { // with the help of assyc setInterval, this fu
     convertOne();
 }, 100);
 convInt();
-// clearInterval(convInt);
+
 
 
 // let testMeObj = {
