@@ -135,7 +135,7 @@ function convert(curr1, curr2) {
 function convertOne() {
 
     secondCur.value = firstCur.value * objPrice[returnObjKeys(objPrice)[0]];
-    let symbole = document.querySelector('.amount');
+    //<objPrice[returnObjKeys(objPrice)[0]]> this line of code allows the function to return an arrays of keys to be used to obtain the values within the objPrice 
 
     symbole.textContent = firstCur.value * objPrice[returnObjKeys(objPrice)[0]];
 
@@ -144,7 +144,7 @@ function convertOne() {
 }
 
 
-let convInt = setInterval(() => {
+let convInt = setInterval(() => { // with the help of assyc setInterval, this function made it possible to tract every change in the input fied 
     convertOne();
 }, 100);
 convInt();
