@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/news.js" defer></script>
 
 
 
@@ -16,7 +18,7 @@
 
 <body>
 
-    <header class="container">
+    <header class="container col-12">
         <nav class="navbar navbar-dark bg-dark navbar-expand-md">
 
 
@@ -61,71 +63,65 @@
 
     </header>
 
-    <div class="row">
 
-        <div class="col-md-4 col-9 offset-2  card card-header ">
-            <fieldset class="card card-header display d-none">
+    <main>
+        <section class="row">
 
-                <h2 class="col-md-12 offset-1"><span class="currSymbol ">$ </span> <span class="amount">80</span></h2>
-                <div class="form-group">
-                    <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 firstCurrency">
-                </div>
-                <div class="form-group">
-                    <select class="country1 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
-               </select>
-                </div>
-                <div class="form-group">
-                    <select class="country2 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
-        
-            </select>
-                </div>
-                <div class="form-group">
+            <div class="col-md-4 col-9 offset-2">
+                <fieldset class="card card-header display d-none bg-dark">
+
+                    <h2 class="col-md-12 offset-1"><span class="currSymbol "></span> <span class="amount">0</span></h2>
                     <div class="form-group">
-                        <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 secondCurrency">
+                        <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 firstCurrency">
                     </div>
-                </div>
-            </fieldset>
+                    <div class="form-group">
+                        <select class="country1 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="country2 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
+                                    
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 secondCurrency">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
 
-        </div>
+        </section>
+
+
+        <section class="container">
+
+            <article class="col-sm-2 ">
+
+                <ul id='newsList' class="row">
+
+
+                </ul>
+
+
+            </article>
 
 
 
-        <div class="col-md-4 col-12 card card-header">
+        </section>
 
-            <!-- <div fxs_widget fxs_name="news" fxs_host="https://subscriptions.fxstreet.com/" fxs_feed="generalfeed" fxs_initial_take="3" fxs_take="10" fxs_view="minimal" fxs_customizable="true" fxs_free fxs_title="Place your title here" fxs_title_link="place your url here"
-                fxs_disable_links>
-            </div> -->
-            <span intrinio-widget-type="inline_ticker_summary m-8" intrinio-widget-ticker="AAPL"> AAPL </span>
-            <span intrinio-widget-type="inline_ticker_summary" intrinio-widget-ticker="AAPL"> AAPL </span><span intrinio-widget-type="inline_ticker_summary" intrinio-widget-ticker="AAPL"> AAPL </span>
-        </div>
-    </div>
+    </main>
+
     <footer class="container">
 
-        <div> Copyright 2020 </div>
+        <div> Copyright <span id="cpyYear"> </span> </div>
 
     </footer>
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="./bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
-    <script src="https://staticcontent.fxstreet.com/widgets/core/js/fxswidget.js">
-    </script>
+    <!-- <script src="./js/app.js"></script> -->
 
-    <!-- <script type="application/javascript">
-        (function(f, i, n, t, e, c, h) {
-            f['IntrinioWidgetsObject'] = e;
-            f[e] = f[e] || function() {
-                (f[e].q = f[e].q || []).push(arguments)
-            }, f[e].l = 1 * new Date();
-            c = i.createElement(n),
-                h = i.getElementsByTagName(n)[0];
-            c.async = 1;
-            c.src = t;
-            h.parentNode.insertBefore(c, h)
-        })(window, document, 'script', 'https://widget-api-cdn.intrinio.com/intrinio-widgets.min.js', 'iw');
-        iw('initialize', {
-            userId: '2095ee9f024bec25f8d318238bba3322bdd1271613906cd7b5125229f23d654b'
-        });
-    </script> -->
+
 </body>
 
 

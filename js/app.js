@@ -4,11 +4,13 @@ let respond = new XMLHttpRequest();
 let conv = new XMLHttpRequest();
 let currencyOne;
 let currencyTwo;
-let objPrice;
+let objPrice; // used to store the price of the currency to be converted
+let convIntID; // ID for setInterval 
 
 let urlCurrencies = `https://free.currconv.com/api/v7/currencies?apiKey=${apiKey}`;
 let urlCountries = `https://free.currconv.com/api/v7/countries?apiKey=${apiKey}`;
-let urlConvert = `https://free.currconv.com/api/v7/convert?q=${currencyOne}_${currencyTwo},${currencyTwo}_${currencyOne}&compact=ultra&apiKey=${apiKey}`;
+let urlConvert = "";
+
 
 let countries = document.querySelector('.country1'); // select menu to load all countries, 
 let countries2 = document.querySelector('.country2'); //select menu to load all countries 2
@@ -16,18 +18,33 @@ let firstCur = document.querySelector('.firstCurrency'); // input for amount to 
 let secondCur = document.querySelector('.secondCurrency'); //input for amount to be converted
 let currConShow = document.querySelector('#currencyConverter'); //to identify the link list to toggle currentcy converter 
 let symbole = document.querySelector('.amount');
+let cpyYear = document.querySelector('#cpyYear');
 
 
 //EventListener  abr = EL 
 
 countries.addEventListener('click', countries1Currency); // EL to load countries in menu one
 countries2.addEventListener('click', countries2Currency); //EL to load countries in menu two
-firstCur.addEventListener('click', convertOne);
+firstCur.addEventListener('click', convertBaseCurrentcy);
 currConShow.addEventListener('click', (e) => { //EL with annonymous funtion implemetation
     let card = document.querySelector('.display'); //Purpose is identify an element then toggle 
-    card.classList.toggle('d-none'); //a class from bootrap
+    card.classList.toggle('d-none'); //calling a class from bootrap
+
+    if (card.classList.contains('d-none')) {
+        stopIntervalCall();
+
+    }
+
 });
 
+
+document.addEventListener('DOMContentLoaded', () => { // EL for copyright span text on the footer 
+
+    let year = new Date();
+
+    cpyYear.textContent = new Date().getFullYear();
+    console.log(cpyYear);
+})
 
 
 
@@ -52,11 +69,12 @@ respond.onreadystatechange = (e) => { //
 
 //functions 
 
-function returnValue(keys, index) {
-    return keys[index];
+function returnValue(key, index) {
+    return KeyframeEffect[index]; // returns the value of the given key
 
 }
 
+// function to return object populated with keys make it easier to work with API 
 function returnObjKeys(object) {
     let objs = [];
     for (let obj in object) {
@@ -92,20 +110,27 @@ function loadCountriesToMenu(item) {
 }
 
 function countries1Currency(e) {
+    let BaseCurrentcy;
+    let currentcy2;
+    if (!Number.isNaN(this.value)) {
 
-    // firstCur.value = this.value;
-    let cur1 = this.value; // takes the input value of the element of the first currency 
-    let cur2 = countries2.value; //takes the input value of the element of the second currentcy
-    convert(cur1, cur2); // sand it to the convert function
+        BaseCurrentcy = this.value; // takes the input value of the element of the first currency 
+        currentcy2 = countries2.value; //takes the input value of the element of the second currentcy
+    }
+    convert(BaseCurrentcy, currentcy2); // sand it to the convert function
+
 
 }
 
 function countries2Currency(e) {
+    let BaseCurrentcy;
+    let currentcy2;
+    if (!Number.isNaN(this.value)) { // validating the input field of cuurrency two 
+        let BaseCurrentcy = countries.value; //takes the input value of the element of the first currency
+        let currentcy2 = this.value; //takes the input value of the element of the second currentcy
+    }
 
-    // firstCur.value = this.value;
-    let cur1 = countries.value; //takes the input value of the element of the first currency
-    let cur2 = this.value; //takes the input value of the element of the second currentcy
-    convert(cur1, cur2); // sand it to the convert function
+    convert(BaseCurrentcy, currentcy2); // sand it to the convert function
 
 }
 
@@ -115,7 +140,6 @@ function convert(curr1, curr2) {
     currencyTwo = encodeURIComponent(curr2); //makes sure the string is encoded i.e meets the standard to be a api query 
     urlConvert = `https://free.currconv.com/api/v7/convert?q=${currencyOne}_${currencyTwo},${currencyTwo}_${currencyOne}&compact=ultra&apiKey=${apiKey}`; //inserting mixing variables
     conv.open('GET', urlConvert);
-    conv.send(); //calling the API 
 
     conv.onreadystatechange = (e) => {
 
@@ -123,31 +147,53 @@ function convert(curr1, curr2) {
             console.log(conv.response, " s");
             objPrice = JSON.parse(conv.response); // convert from JSON to obj 
 
-            firstCur.value = objPrice[returnObjKeys(objPrice)[0]]; // 
+            // firstCur.value = objPrice[returnObjKeys(objPrice)[0]]; // 
 
         }
 
     }
+    conv.send(); //calling the API 
+
 
 }
 
 
-function convertOne() {
+function convertBaseCurrentcy() {
+    trackChanges(); // call setInterval to tract changes in the input 
+    let amount = 0;
+    // return the object then i access the first index of the currentcy inside the objPrice
+    if (!Number.isNaN(firstCur.value) || objPrice[returnObjKeys(objPrice)[0]] !== null) { // validation if botj
+        //< objPrice[returnObjKeys(objPrice)[0]]).toPrecision(20)>
+        // return the object then i access the first index of the currentcy inside the objPrice
+        //then precision is 15
+        //then amount will obtain the calculated value of the currentcies
+        amount = (firstCur.value * objPrice[returnObjKeys(objPrice)[0]]).toPrecision(10);
+        secondCur.value = amount;
 
-    secondCur.value = firstCur.value * objPrice[returnObjKeys(objPrice)[0]];
-    //<objPrice[returnObjKeys(objPrice)[0]]> this line of code allows the function to return an arrays of keys to be used to obtain the values within the objPrice 
+        symbole.textContent = `${amount}\t`;
 
-    symbole.textContent = firstCur.value * objPrice[returnObjKeys(objPrice)[0]];
-
-    // firstCur.value = secondCur.value * objPrice[returnObjKeys(objPrice)[1]];
+        return amount;
+    }
 
 }
 
+function trackChanges() {
 
-let convInt = setInterval(() => { // with the help of assyc setInterval, this function made it possible to tract every change in the input fied 
-    convertOne();
-}, 100);
-convInt();
+    convIntID = setInterval(() => { // with the help of assyc setInterval, this function made it possible to tract every change in the input fied 
+        convertBaseCurrentcy(); // value is used to tract if the amount being conveter
+
+    }, 100);
+
+}
+
+function stopIntervalCall() {
+    clearInterval(convIntID); // stops the 
+    console.log('stop interval');
+}
+
+
+
+// convIntID;
 
 
 
