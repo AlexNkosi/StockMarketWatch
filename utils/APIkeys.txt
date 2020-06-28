@@ -1,0 +1,3 @@
+https://www.alphavantage.co/support/#api-key : U6ZL0XMOW1WNOTWA
+
+https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=demo
