@@ -46,6 +46,9 @@ function createNewsElement(objNews) {
         articleDate.classList.add('class_date');
         link.classList.add('class_link');
         list.classList.add('col-sm');
+        // list.classList.add('card');
+        // list.classList.add('card-handler');
+
 
         heading.textContent = objNews[index].headline;
 

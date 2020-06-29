@@ -39,6 +39,9 @@ a {
 
 ul {
     list-style: none;
+}
+
+.class_list {
     position: relative;
 }
 
@@ -48,27 +51,25 @@ ul {
     margin-bottom: 3.5em;
 }
 
-
-/* .class_link {
+.class_link {
     position: absolute;
     bottom: 0;
     left: 2.5em;
-    margin-bottom: 0em;
-    width: 50%;
+    margin: -0.5em;
+    width: 60%;
 }
 
 .class_date {
     position: absolute;
     bottom: -0.1em;
     left: 19.5em;
+    margin: .5em;
 }
 
 .class_source {
-    /* position: absolute; */
-
-bottom: -0.1em;
-left: 16.6em;
-margin-top: 2.5em;
-
+    position: absolute;
+    bottom: -0.1em;
+    left: 16.6em;
+    margin: .5em;
+    /* margin-top: 2.5em; */
 }
-*/
