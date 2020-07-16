@@ -5,7 +5,8 @@ let conv = new XMLHttpRequest();
 let currencyOne;
 let currencyTwo;
 let objPrice; // used to store the price of the currency to be converted
-let convIntID; // ID for setInterval 
+let convIntID; // ID for setInterval
+let arrSymbols = ['','']; 
 
 let urlCurrencies = `https://free.currconv.com/api/v7/currencies?apiKey=${apiKey}`;
 let urlCountries = `https://free.currconv.com/api/v7/countries?apiKey=${apiKey}`;
@@ -23,8 +24,8 @@ let cpyYear = document.querySelector('#cpyYear');
 
 //EventListener  abr = EL 
 
-countries.addEventListener('click', countries1Currency); // EL to load countries in menu one
-countries2.addEventListener('click', countries2Currency); //EL to load countries in menu two
+countries.addEventListener('click', storeContriesToArray); // EL to load countries in menu one
+countries2.addEventListener('click', storeContriesToArray); //EL to load countries in menu two
 firstCur.addEventListener('click', convertBaseCurrentcy);
 currConShow.addEventListener('click', (e) => { //EL with annonymous funtion implemetation
     let card = document.querySelector('.display'); //Purpose is identify an element then toggle 
@@ -109,30 +110,23 @@ function loadCountriesToMenu(item) {
 
 }
 
-function countries1Currency(e) {
+
+function storeContriesToArray() 
+{
     let BaseCurrentcy;
     let currentcy2;
-    if (!Number.isNaN(this.value)) {
+    if (!Number.isNaN(countries.value)) {
 
-        BaseCurrentcy = this.value; // takes the input value of the element of the first currency 
+        BaseCurrentcy = countries.value; // takes the input value of the element of the first currency 
         currentcy2 = countries2.value; //takes the input value of the element of the second currentcy
+        arrSymbols[0] = BaseCurrentcy; 
+        arrSymbols[1] = currentcy2; 
     }
-    convert(BaseCurrentcy, currentcy2); // sand it to the convert function
-
-
-}
-
-function countries2Currency(e) {
-    let BaseCurrentcy;
-    let currentcy2;
-    if (!Number.isNaN(this.value)) { // validating the input field of cuurrency two 
-        let BaseCurrentcy = countries.value; //takes the input value of the element of the first currency
-        let currentcy2 = this.value; //takes the input value of the element of the second currentcy
-    }
-
+    console.log(arrSymbols);
     convert(BaseCurrentcy, currentcy2); // sand it to the convert function
 
 }
+
 
 // 
 function convert(curr1, curr2) {
