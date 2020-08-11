@@ -1,6 +1,18 @@
 /* header {
     background-color: grey;
 } */
+* {
+    margin: 0 ;
+    padding: 0;
+    
+}
+body{
+    background: radial-gradient(120deg,   #29323c,#485563);
+    background: radial-gradient(#29323c,#485563);
+    /* background-image: url("C:\Users\USER\Desktop\StockMarketWatch\img\patrick-weissenberger.jpg"); */
+    
+    
+}
 
 .btn-info {
     border-color: #D5D8DC;
@@ -25,51 +37,115 @@ a {
     width: 14.5em;
 } */
 
-.firstCurrency {
-    position: absolute;
-    top: 4.7em;
-    left: 2em;
+#convertedPirce{
+    font-size: 2em;
+    font-weight: 600;
 }
+#equalSign
+{
+    
+    font-size: 2em;
+    font-weight: 600;
+}
+.carousel-item{
+    height: 25em;
+    padding: auto auto;
+    width: 100%;
+    
+}
+/* .carousel-control-prev{
+    width: 100%;
+} */
 
-.secondCurrency {
-    position: absolute;
-    top: 8.1em;
-    left: 2em;
-}
+.carousel-item {
 
-ul {
-    list-style: none;
-}
+    margin-top: 5em;
+    height: 50vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .carousel-caption {
+    /* bottom: 350px; */
+    /* top: 0; */
+  }
+  
+  .carousel-caption h5 {
+    color: #fff;
+    background:radial-gradient(#29323c , #485563);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* margin-top: 10em; */
+    opacity: .5;
+    border-radius: 15px;
+    padding: .5em;
+    transition: opacity 530ms ease-out;
+  }
 
-.class_list {
-    position: relative;
-}
+  .carousel-item h5:hover{
+      opacity: 1;
+  }
 
-.class_img {
-    width: 15m;
-    height: 15.5em;
-    margin-bottom: 3.5em;
-}
-
-.class_link {
-    position: absolute;
-    bottom: 0;
-    left: 2.5em;
-    margin: -0.5em;
-    width: 60%;
-}
-
-.class_date {
-    position: absolute;
-    bottom: -0.1em;
-    left: 19.5em;
-    margin: .5em;
-}
-
-.class_source {
-    position: absolute;
-    bottom: -0.1em;
-    left: 16.6em;
-    margin: .5em;
-    /* margin-top: 2.5em; */
-}
+  .carousel-item a {
+      color: #fff;
+      text-decoration: underline;
+    
+  }
+  
+  .carousel-caption p {
+    color: #fff;
+    background-color: #485563;
+    width: 100%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-top: 11em;
+  }
+  
+  .navbar-light .navbar-brand {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-toggler {
+    background: #fff;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-link {
+    padding: .2rem 1rem;
+  }
+  
+  .nav-link.active,.nav-link:focus{
+    color: #fff;
+  }
+  
+  .navbar-toggler {
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: 0.3;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+  }
+  
+  

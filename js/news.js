@@ -43,37 +43,55 @@ function createNewsElement(objNews) {
     for (let index = 0; index < objNews.length; index++) {
         // creating elements to use in the news list 
            
-    let imgDiv = document.createElement('div');
+    let itemDiv = document.createElement('div');
     let newsImg = document.createElement('img');
     let newsListed = document.createElement('li');
+    let newsHeading = document.createElement('h5');
+    // let newsScope = document.createElement('p');
+    let captionDIv = document.createElement('div');
+    let link = document.createElement('a');
+
 
     //adding classes 
     parentDiv.classList.add('carousel-inner');
-    imgDiv.classList.add('carousel-item');
+    itemDiv.classList.add('carousel-item');
+    //adding 
+    captionDIv.classList.add('carousel-caption');
+    // captionDIv.classList.add('d-none');
+    captionDIv.classList.add('d-md-block');
+    link.classList.add('primary-btn');
+
+    
     
     //setting the first news to be active in the slide 
     if(index === 0)
     {
-        imgDiv.classList.add('active');
-        newsListed.classList.add('active')
+        itemDiv.classList.add('active');
+        newsListed.classList.add('active');
         
     }
     newsImg.classList.add('d-block');
-    newsImg.classList.add('w-50');
+    newsImg.classList.add('w-100');
 
     //adding image source
     newsImg.setAttribute('src', objNews[index].image);
-    // console.log(imgNames[index]);
+    newsHeading.textContent = objNews[index].headline;
+    link.href = objNews[index].url;
    
-    //seting newsA
+   
+    //setting newsA
     newsListed.setAttribute('data-target','#newsSlide');
     newsListed.setAttribute('data-slide-to',index);
   
     list.appendChild(newsListed);
     count++;
 
-    imgDiv.appendChild(newsImg);
-    parentDiv.appendChild(imgDiv);
+    link.appendChild(newsHeading);
+    captionDIv.appendChild(link);
+    // captionDIv.appendChild(newsScope);
+    itemDiv.appendChild(newsImg);
+    itemDiv.appendChild(captionDIv);
+    parentDiv.appendChild(itemDiv);
     slideParent.appendChild(parentDiv);
         
     }

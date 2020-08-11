@@ -15,8 +15,8 @@ let urlConvert = "";
 
 let countries = document.querySelector('.country1'); // select menu to load all countries, 
 let countries2 = document.querySelector('.country2'); //select menu to load all countries 2
-let firstCur = document.querySelector('.firstCurrency'); // input for amount to be converted
-let secondCur = document.querySelector('.secondCurrency'); //input for amount to be converted
+let firstCur = document.querySelector('#firstCurrency'); // input for amount to be converted
+let secondCur = document.querySelector('#secondCurrency'); //input for amount to be converted
 let currConShow = document.querySelector('#currencyConverter'); //to identify the link list to toggle currentcy converter 
 let symbole = document.querySelector('.amount');
 let cpyYear = document.querySelector('#cpyYear');
