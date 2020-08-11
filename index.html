@@ -18,6 +18,7 @@
 
 <body>
 
+    <!-- header navigation  -->
     <header class="container-fluid col-12">
         
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -30,11 +31,11 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
      
       <li class="nav-item">
-                <a class="nav-link" href="#">currency Conveter</a>
+                <a class="nav-link" id="currencyConverter" href="#">currency Conveter</a>
               </li>
       <li class="nav-item">
                 <a class="nav-link" href="#">view quates</a>
@@ -49,53 +50,15 @@
       </div>
       </div>
       </nav>
-        <!-- <nav class="navbar navbar-dark bg-dark navbar-expand-md">
-
-
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#theMenu"> 
-                <span class="navbar-toggler-icon">
-
-                </span></button>
-
-            <div id="theMenu" class="navbar-collapse collapse">
-                <ul class="navbar-nav">
-                    <h1 class="navbar-brand ">Stock Market</h1>
-                    <a href="#" class="nav-link">
-                        <li class="nav-item">Home</li>
-                    </a>
-                    <a href="#" class="nav-link">
-                        <li class="nav-item">View Quotes</li>
-                    </a>
-                    <a href="#" class="nav-link">
-                        <li class="nav-item">Graph</li>
-                    </a>
-                    <a href="#" class="nav-link " id="currencyConverter">
-                        <li class="nav-item">convert currency</li>
-                    </a>
-                    <form action="">
-                        <div class="input-group col-sm  offset-lg-3 " id="searchInput">
-
-
-                            <input class="form-control " id="" type="search" placeholder="search " />
-                            <div class="input-group-append">
-                                <button type="button" class="btn btn-info bg-dark"> <i class="fas fa-search"> </i>
-                                </button>
-
-                            </div>
-
-                        </div>
-                    </form>
-
-                </ul>
-
-            </div>
-        </nav>
-         -->
 
     </header>
 
-
+    <!-- header navigation  -->
+    
+    <!--main page  -->
     <main>
+        <!-- convert price section -->
+
         <section id="">
 
             <form action="" class="">
@@ -180,25 +143,9 @@
             </div>
         </form>
         </section>
+        <!-- convert price section -->
 
-
-        <!-- <section class="container">
-
-
-
-            <article class="">
-
-                <ul id='newsList' class="row">
-
-
-                </ul>
-
-
-            </article>
-
-
-
-        </section> -->
+        <!-- News Slide Section -->
 
         <section class="container ">
 
@@ -207,7 +154,7 @@
                 <ol class="carousel-indicators">
                 </ol>
                 <div class="carousel-inner">
-                    
+
                   
                 </div>
                 <a class="carousel-control-prev" href="#newsSlide" role="button" data-slide="prev">
@@ -220,14 +167,53 @@
                 </a>
               </article>
         </section>
+        <!-- News Slide Section -->
 
     </main>
+    <!-- main page  -->
 
-    <footer class="container">
+    <!-- footer section -->
+    <footer class="page-footer font-small blue special-color-dark pt-4">
+        
+    <div class="container">
 
-        <div> Copyright <span id="cpyYear"> </span> </div>
+       
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1">
+                  <i class="fab fa-facebook-f"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                  <i class="fab fa-twitter"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1">
+                  <i class="fab fa-google-plus-g"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1">
+                  <i class="fab fa-linkedin-in"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1">
+                  <i class="fab fa-dribbble"> </i>
+                </a>
+              </li>
+            </ul>
+            <!-- Social buttons -->
+    </div>
+
+        <div class="footer-copyright text-center py-3">&copy; Copyright <span id="cpyYear"> </span> </div>
 
     </footer>
+
+    <!-- footer -->
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="./bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
