@@ -1,1 +1,0 @@
-<div class="subtitle is-6">BTC/USDT<span class="price is-pulled-right"><strong>11873.01</strong></span><div class="text-green mt-1"><span class="icon float-left mt-1"><i class="fas fa-chevron-up"></i></span><span style="font-size: 1.2rem;">1.64%</span> (191.33)</div></div>
