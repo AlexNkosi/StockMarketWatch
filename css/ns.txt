@@ -1,0 +1,88 @@
+
+    
+  <div class="model" id="mymodel" tabindex="-1" role="dialog"> 
+    <div class="model-dialog" role="document">
+
+        <div class="model-content">
+            <div class="model-header">
+                <h2 class="model-title"> Header</h2>
+                <button class="close" type="button" data-dismiss='model' >X</button>
+            </div>
+            <!-- end model-header -->
+
+            <div class="model-body">
+              <!-- POP UP CONVERTER -->
+            <form action="" class="">
+            <div class="col-md-4 col-9 offset-2 w-100" >
+                <fieldset class="card card-header  display d-none">
+                    <legend>currency converter</legend>
+
+                    <div class="row">
+
+                        <div class=" offset-5 col-12">
+                        <label for="convertedPrice"></label>
+                        <span id="convertedPirce" class="currSymbol">0</span>
+                          </div>
+                    </div>
+                    <div class="row ">
+
+                        <div class="form-group  col-5">
+
+                            <label for="firstCurrency"></label>
+                            <input type="number" name="" id="firstCurrency" class="form-control">
+                        </div>
+                        <div class="form-group offset-1 col-5 ">
+
+                            <label for="secondCurrency"></label>
+                            <input type="number" name="" id="secondCurrency" class="form-control">
+                            
+                        
+                        </div>
+                       
+                        <div class=" offset-5 col-2">
+                            <label for="equalSign"></label>
+                            <span id="equalSign" class="">=</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                       <div class="form-group col-5 ">
+                            <select class="form-control country1">
+
+                            <option value="">...</option>
+                            
+                            <option value="">.</option>
+                            </select>
+                       </div>
+                       <div class="form-group offset-1 col-5">
+                        <select class="form-control country2" >
+
+                        <option value="">...</option>
+                        
+                        <option value="">.</option>
+                        </select>
+                   </div>
+
+                    </div>
+                   
+               <fieldset>  
+            </div>
+        </form>
+
+            </div>
+            <!-- end model body-->
+
+        </div>   
+        <!-- end model-content -->
+        
+    </div>
+    <!-- end .model-dialog -->
+</div> 
+<!-- end model  -->
+
+
+
+
+  <!-- END MODEL  -->

@@ -28,7 +28,7 @@ countries.addEventListener('click', storeContriesToArray); // EL to load countri
 countries2.addEventListener('click', storeContriesToArray); //EL to load countries in menu two
 firstCur.addEventListener('click', convertBaseCurrentcy);
 currConShow.addEventListener('click', (e) => { //EL with annonymous funtion implemetation
-    let card = document.querySelector('.display'); //Purpose is identify an element then toggle 
+    let card = document.querySelector('.modal'); //Purpose is identify an element then toggle 
     card.classList.toggle('d-none'); //calling a class from bootrap
 
     if (card.classList.contains('d-none')) {
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => { // EL for copyright span t
     cpyYear.textContent = new Date().getFullYear();
     console.log(cpyYear);
 })
-
 
 
 respond.open('GET', urlCountries); // calling API to load all countries 
