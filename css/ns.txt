@@ -86,3 +86,91 @@
 
 
   <!-- END MODEL  -->
+
+  
+        <!-- convert price section -->
+
+        <section id="">
+
+            <form action="" class="">
+            <div class="col-md-4 col-9 offset-2 w-100" >
+                <fieldset class="card card-header  display d-none">
+                    <legend>currency converter</legend>
+
+                    <div class="row">
+
+                        <div class=" offset-5 col-12">
+                        <label for="convertedPrice"></label>
+                        <span id="convertedPirce" class="currSymbol">0</span>
+                          </div>
+                    </div>
+                    <div class="row ">
+
+                        <div class="form-group  col-5">
+
+                            <label for="firstCurrency"></label>
+                            <input type="number" name="" id="firstCurrency" class="form-control">
+                        </div>
+                        <div class="form-group offset-1 col-5 ">
+
+                            <label for="secondCurrency"></label>
+                            <input type="number" name="" id="secondCurrency" class="form-control">
+                            
+                        
+                        </div>
+                       
+                        <div class=" offset-5 col-2">
+                            <label for="equalSign"></label>
+                            <span id="equalSign" class="">=</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                       <div class="form-group col-5 ">
+                            <select class="form-control country1">
+
+                            <option value="">...</option>
+                            
+                            <option value="">.</option>
+                            </select>
+                       </div>
+                       <div class="form-group offset-1 col-5">
+                        <select class="form-control country2" >
+
+                        <option value="">...</option>
+                        
+                        <option value="">.</option>
+                        </select>
+                   </div>
+
+                    </div>
+                   
+                        <!-- <legend> currrentcy converter</legend> -->
+
+                    <!-- <h2 class="col-md-12 offset-1"><span class="currSymbol "></span> <span class="amount">0</span></h2>
+               
+                    <div class="form-group">
+
+                        <label for="firstCurrency"></label>
+                        <input type="number" id="firstCurrency" class="form-control-sm col-md-4  offset-md-2 col-2 firstCurrency">
+                    </div>
+                    <div class="form-group">
+                        <select class="country1 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="country2 form-control-sm col-md-3  offset-9 col-3 offset-0 ">
+                                    
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control-sm col-md-4  offset-md-2 col-2 secondCurrency">
+                        </div>
+                    </div> -->
+               <fieldset>  
+            </div>
+        </form>
+        </section>

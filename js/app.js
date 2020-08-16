@@ -18,7 +18,7 @@ let countries2 = document.querySelector('.country2'); //select menu to load all 
 let firstCur = document.querySelector('#firstCurrency'); // input for amount to be converted
 let secondCur = document.querySelector('#secondCurrency'); //input for amount to be converted
 let currConShow = document.querySelector('#currencyConverter'); //to identify the link list to toggle currentcy converter 
-let symbole = document.querySelector('.amount');
+let convertedPirce = document.querySelector('#convertedPirce');
 let cpyYear = document.querySelector('#cpyYear');
 
 
@@ -28,13 +28,13 @@ countries.addEventListener('click', storeContriesToArray); // EL to load countri
 countries2.addEventListener('click', storeContriesToArray); //EL to load countries in menu two
 firstCur.addEventListener('click', convertBaseCurrentcy);
 currConShow.addEventListener('click', (e) => { //EL with annonymous funtion implemetation
-    let card = document.querySelector('.modal'); //Purpose is identify an element then toggle 
-    card.classList.toggle('d-none'); //calling a class from bootrap
+    let card = document.querySelector('#currentcyModal'); //Purpose is identify an element then toggle 
+    // card.classList.toggle('d-none'); //calling a class from bootrap
 
-    if (card.classList.contains('d-none')) {
-        stopIntervalCall();
+    // if (card.classList.contains('d-none')) {
+    //     stopIntervalCall();
 
-    }
+    // }
 
 });
 
@@ -163,7 +163,7 @@ function convertBaseCurrentcy() {
         amount = (firstCur.value * objPrice[returnObjKeys(objPrice)[0]]).toPrecision(10);
         secondCur.value = amount;
 
-        symbole.textContent = `${amount}\t`;
+        convertedPirce.textContent = `${amount}\t`;
 
         return amount;
     }
